@@ -20,6 +20,7 @@ from .reset_password import ResetPasswordSerializer
 from .register import UserRegistrationSerializer
 from .update_profile import UpdateProfileSerializer
 from .test_serializer import TestSerializer
+from .leader_board import LeaderBoardSerializer, LeaderBoardSerializerList
 
 # Serializers that depend on other serializers
 from .token_use import TokenUseSerializer
@@ -30,3 +31,4 @@ from .parsons_question import ParsonsQuestionSerializer, ParsonsSubmissionSerial
 from .uqj import UQJSerializer
 from .canvas_course_registration import CanvasCourseRegistrationSerializer
 from .course import CourseSerializer, CourseSerializerList
+
