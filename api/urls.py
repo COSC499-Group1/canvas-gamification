@@ -40,8 +40,11 @@ router.register(r'schema', SchemaViewSet, basename='schema')
 router.register(r'difficulty', DifficultyViewSet, basename='difficulty')
 router.register(r'apitest', ApiTestViewSet, basename='apitest')
 router.register(r'admin', AdminViewSet, basename='admin')
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> parent of dbe3d41... not sure what changed
 
 app_name = 'api'
 urlpatterns = [
