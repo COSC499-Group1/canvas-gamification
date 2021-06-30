@@ -40,6 +40,9 @@ if settings.DEBUG:
         path('api/', include('api.urls', namespace='api')),
         path('canvas/', include('canvas.urls', namespace='canvas')),
         path('leader_board/', include(('leader_board.urls', 'leader_board'))),
+
+        # path('leaderboard/', include(('leaderboard.urls', 'leaderboard'))),
+
         path('', TemplateView.as_view(template_name='index.html')),
     ]
 else:
