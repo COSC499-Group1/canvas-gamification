@@ -6,4 +6,4 @@ from course.models.models import LeaderBoardStudents
 class LeaderBoardStudentsSerializer(serializers.ModelSerializer):
     class Meta:
         model = LeaderBoardStudents
-        fields = ['student', 'leader_board', 'token_value']
+        fields = ['student', 'course', 'leader_board', 'token_value', 'team', 'streak']
