@@ -48,7 +48,14 @@ class LeaderBoardStudents(models.Model):
     def __str__(self):
         return self.course.name + " " + self.student.email
 
+class LeaderBoardTeam(models.Model):
+    name = models.CharField(max_length=100)
+    course = models.ForeignKey(CanvasCourse, on_delete=models.DO_NOTHING)
+    team_streak = models.IntegerField(default=0)
+    team_tokens = models.IntegerField(default = 0)
 
+    def __str__(self):
+        return self.course.name
 
 class QuestionCategory(models.Model):
     name = models.CharField(max_length=100)

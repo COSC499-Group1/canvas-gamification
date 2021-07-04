@@ -3,7 +3,7 @@ from django.contrib import admin
 from djrichtextfield.widgets import RichTextWidget
 
 from course.models.models import Question, VariableQuestion, MultipleChoiceQuestion, Submission, QuestionCategory, \
-    JavaSubmission, JavaQuestion, TokenValue, MultipleChoiceSubmission, UserQuestionJunction,LeaderBoard,LeaderBoardStudents
+    JavaSubmission, JavaQuestion, TokenValue, MultipleChoiceSubmission, UserQuestionJunction,LeaderBoard,LeaderBoardStudents,LeaderBoardTeam
 from course.models.parsons_question import ParsonsQuestion, ParsonsSubmission
 
 
@@ -57,3 +57,4 @@ admin.site.register(QuestionCategory)
 
 admin.site.register(LeaderBoard)
 admin.site.register(LeaderBoardStudents)
+admin.site.register(LeaderBoardTeam)
