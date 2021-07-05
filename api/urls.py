@@ -9,11 +9,10 @@ from api.views import QuestionViewSet, SampleMultipleChoiceQuestionViewSet, User
     CourseViewSet, CanvasCourseRegistrationViewSet, ResetPasswordViewSet, UserRegistrationViewSet, \
     UpdateProfileViewSet, SubmissionViewSet, ObtainAuthTokenView, MultipleChoiceQuestionViewSet, JavaQuestionViewSet, \
     ParsonsQuestionViewSet, EventViewSet, TokenUseViewSet, SchemaViewSet, DifficultyViewSet, ChangePasswordViewSet, \
-    ApiTestViewSet
+    ApiTestViewSet, LeaderBoardStudentsViewSet, LeaderBoardViewSet
 
 from api.views.admin import AdminViewSet
-from api.views.leaderboard import LeaderBoardViewSet
-from api.views.leaderboard_students import LeaderBoardStudentsViewSet
+
 
 router = DefaultRouter()
 router.register(r'questions', QuestionViewSet, basename='question')

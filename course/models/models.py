@@ -32,13 +32,13 @@ class TestModel(models.Model):
 
 
 class LeaderBoard(models.Model):
+
     name = models.CharField(max_length=300, unique=True)
     assigned_course = models.ForeignKey(CanvasCourse, to_field='name', on_delete=models.DO_NOTHING)
     created_by = models.ForeignKey(MyUser, on_delete=models.DO_NOTHING)
 
     def __str__(self):
         return self.name
-
 
 class LeaderBoardStudents(models.Model):
     student = models.ForeignKey(MyUser, on_delete=models.DO_NOTHING)
@@ -48,8 +48,7 @@ class LeaderBoardStudents(models.Model):
     leader_board = models.ForeignKey(LeaderBoard, to_field='name', on_delete=models.DO_NOTHING)
 
     def __str__(self):
-        return self.leaderboard.assigned_course.name
-
+        return self.course.name + " " + self.student.email
 
 class QuestionCategory(models.Model):
     name = models.CharField(max_length=100)
